@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'Azure Pipeline'
+  name: 'Azure Pipeline'
 
 # Command line
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
