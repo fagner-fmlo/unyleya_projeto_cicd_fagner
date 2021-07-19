@@ -74,6 +74,5 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'devops'
-    repository: 'fagner31/devops'
+    repository: 'fagner31/devops:tagname'
     command: 'push'
-
