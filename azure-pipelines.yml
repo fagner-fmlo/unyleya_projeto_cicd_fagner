@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'devops'
+  name: 'devops'
 
 steps:
 - task: NodeTool@0
