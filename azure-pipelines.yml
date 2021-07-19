@@ -75,6 +75,6 @@ steps:
   inputs:
     containerRegistry: 'devops'
     repository: 'https://hub.docker.com/repository/docker/fagner31/devops'
-    command: 'buildAndPush'
+    command: 'push'
     Dockerfile: '**/Dockerfile'
 
