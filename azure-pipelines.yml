@@ -71,5 +71,10 @@ steps:
   inputs:
        artifactName: # 'drop'
 
- 
+- task: Docker@2
+  inputs:
+    containerRegistry: 'devops'
+    repository: 'https://hub.docker.com/repository/docker/fagner31/devops'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
 
