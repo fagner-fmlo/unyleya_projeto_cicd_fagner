@@ -1,2 +1,11 @@
-FROM mcr.microsoft.com/dotnet/samples:aspnetapp
-LABEL maintainer="fagner31"
+# syntax=docker/dockerfile:1
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
+WORKDIR /app
+
+# Copy sln and restore as distinct layers
+COPY *.sln .
+RUN dotnet restore
+
+# Copy everything else and build
+COPY *.sln .
+RUN dotnet publish -c Release -o out
